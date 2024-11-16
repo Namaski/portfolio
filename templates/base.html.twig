@@ -11,14 +11,15 @@
     {% block description %}
         Portfolio de Nassim BERABHA, développeur fullstack. Il crée des sites web responsifs où technologies et créativité se rencontrent. Découvrez ses projets et contactez-le pour vos besoins en développement.
     {% endblock description %} " />
-    <script src="https://cdn.tailwindcss.com"></script>
 
 
     {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
 
     {% endblock %}
 
     {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
 
     {% endblock %}
 
