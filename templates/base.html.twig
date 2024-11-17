@@ -26,7 +26,20 @@
 </head>
 
 <body class="bg-gray-900 text-gray-200 font-sans">
-    {% block body %}{% endblock %}
+    <div id="wrapper" class="w-[80%] mx-auto">
+
+        {% block header %}
+            {% include "components/_navbar.html.twig" %}
+        {% endblock header %}
+
+        {% block body %}
+        {% endblock %}
+
+    </div>
+    
+    {% block footer %}
+        {% include "components/_footer.html.twig" %}
+    {% endblock footer %}
 </body>
 
 </html>
