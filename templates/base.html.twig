@@ -14,32 +14,30 @@
 
 
     {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
+    {{ encore_entry_link_tags('app') }}
 
     {% endblock %}
 
     {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
+    {{ encore_entry_script_tags('app') }}
 
     {% endblock %}
 
 </head>
 
-<body class="bg-gray-900 text-gray-200 font-sans">
-    <div id="wrapper" class="w-[80%] mx-auto">
+<body class="bg-background font-sans">
 
-        {% block header %}
-            {% include "components/_navbar.html.twig" %}
-        {% endblock header %}
+    {% include "components/_header.html.twig" %}
 
-        {% block body %}
-        {% endblock %}
+    {% block body %}
+    {% endblock body %}
 
-    </div>
-    
+
     {% block footer %}
-        {% include "components/_footer.html.twig" %}
+    {% include "components/_footer.html.twig" %}
     {% endblock footer %}
+
+
 </body>
 
 </html>

@@ -1,7 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-    background-color: skyblue;
+
+@layer components {
+
+    #heroSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: relative;
+        font-family: "Oxanium", sans-serif;
+        color: white;
+    }
+
+    #heroSection #heroContent #heroTitle {
+        font-family: "Oxanium";
+        font-size: 2em;
+    }
+
+    #heroSection::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('../img/test.jpg');
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+
+        mask-image: url('../img/mask_ink.webp');
+        mask-size: cover;
+        mask-position: center;
+    }
+
 }
