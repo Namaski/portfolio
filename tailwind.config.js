@@ -9,13 +9,15 @@ module.exports = {
       colors: {
         background: "#10002B",
 
-        cta: "#7B2CBF",
+        cta: "#E0AAFF",
+        cta2: "#7B2CBF",
 
-        border: "#E0AAFF",
+        border: "#7B2CBF",
         card: "#240046",
         card_secondary: "#3C096C",
         
-        text: "#FFFFFF",
+        text_card: "#10002B",
+        text: "#FFFFFF"
       },
     },
   },
