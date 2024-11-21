@@ -4,59 +4,11 @@
 
 {% block body %}
 
-{% include "components/_herosection.html.twig" %}
+{% include "home/_herosection.html.twig" %}
 
 <div id="wrapper" class="w-[80%] mx-auto">
 
-  <section id="skills" class="mb-16">
-    <h2 class="text-2xl font-bold text-text mb-6">mes compétences : </h2>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm text-text">
-      <div>
-        <h3 class="font-semibold text-text mb-2">Languages</h3>
-        <ul>
-          <li>- JavaScript</li>
-          <li>- Python</li>
-          <li>- PHP</li>
-          <li>- HTML/CSS</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold text-text mb-2">Databases</h3>
-        <ul>
-          <li>- MySQL</li>
-          <li>- SQLite</li>
-          <li>- PostgreSQL</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold text-text mb-2">Tools</h3>
-        <ul>
-          <li>- VSCode</li>
-          <li>- Git/GitHub</li>
-          <li>- Figma</li>
-          <li>- Linux (Ubuntu)</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold text-text mb-2">Other</h3>
-        <ul>
-          <li>- REST APIs</li>
-          <li>- SEO & Accessibility</li>
-          <li>- TailwindCSS</li>
-          <li>- Twig</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold text-text mb-2">Frameworks</h3>
-        <ul>
-          <li>- React</li>
-          <li>- Symfony</li>
-          <li>- Node.js</li>
-          <li>- Express.js</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+  {% include "home/_skillstree.html.twig" %}
 
   <!-- ABOUT -->
   <section id="about-me" class="mb-16">

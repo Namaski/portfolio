@@ -1,39 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 @layer components {
+  body {
+    background-color: #0d1117; /* Couleur de fond principale */
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.04) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.04) 1px,
+        transparent 1px
+      );
+    background-size: 25px 25px; /* Taille des carrés */
+  }
 
-    #heroSection {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        position: relative;
-        font-family: "Oxanium", sans-serif;
-        color: white;
-    }
+  header {
+    border: 1px solid rgba(224, 170, 255, 0.2);
+  }
 
-    #heroSection #heroContent #heroTitle {
-        font-family: "Oxanium";
-        font-size: 2em;
-    }
+  #heroSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    font-family: "Oxanium", sans-serif;
+    color: white;
+  }
 
-    #heroSection::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-image: url('../img/test.jpg');
-        background-size: cover;
-        background-position: center;
-        z-index: -1;
+  #heroSection #heroContent #heroTitle {
+    font-family: "Oxanium";
+    font-size: 2em;
+  }
 
-        mask-image: url('../img/mask_ink.webp');
-        mask-size: cover;
-        mask-position: center;
-    }
+  #heroSection::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../img/test.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+
+    mask-image: url("../img/mask_ink.webp");
+    mask-size: cover;
+    mask-position: center;
+  }
+
+  .button-glass {
+    @apply inline-block px-8 py-6 rounded-[15px] bg-[rgba(224,170,255,0.1)] 
+           border border-[rgba(224,170,255,0.1)] backdrop-blur-[30px] text-white 
+           text-[14px] tracking-widest uppercase cursor-pointer transition-colors;
+  }
+  
+  .button-glass:hover {
+    @apply bg-[rgba(224,170,255,0.5)];
+  }
+
 
 }
