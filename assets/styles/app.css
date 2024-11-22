@@ -6,7 +6,7 @@
 
 @layer components {
   body {
-    background-color: #0d1117; /* Couleur de fond principale */
+    background-color: #0d1117; 
     background-image: linear-gradient(
         to right,
         rgba(255, 255, 255, 0.04) 1px,
@@ -17,7 +17,7 @@
         rgba(255, 255, 255, 0.04) 1px,
         transparent 1px
       );
-    background-size: 25px 25px; /* Taille des carrés */
+    background-size: 25px 25px;
   }
 
   header {
@@ -63,5 +63,64 @@
     @apply bg-[rgba(224,170,255,0.5)];
   }
 
+  
+.light {
+  @apply absolute transform -translate-x-1/2 -translate-y-1/2;
+}
+
+.light.small {
+  @apply w-[10%];
+}
+
+.light.medium {
+  @apply w-[15%];
+}
+
+.light.large {
+  @apply w-[25%];
+}
+
+.light.top-left {
+  @apply top-[10%] left-[10%];
+}
+
+.light.bottom-right {
+  @apply bottom-[10%] right-[10%];
+}
+
+.light.center {
+  @apply top-1/2 left-1/2;
+}
+
+.light.top-right {
+  @apply top-[5%] right-[5%];
+}
+
+.light.bottom-left {
+  @apply bottom-[5%] left-[5%];
+}
+
+.light.hexagon-1 {
+  @apply top-[30%] left-[20%] w-[12%];
+}
+
+.light.hexagon-2 {
+  @apply bottom-[20%] right-[25%] w-[15%];
+}
+
+
+@media (max-width: 768px) {
+  .light.small {
+    @apply w-[15%];
+  }
+
+  .light.medium {
+    @apply w-[20%];
+  }
+
+  .light.large {
+    @apply w-[30%];
+  }
+}
 
 }

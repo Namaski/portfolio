@@ -1,49 +1,17 @@
-<section id="skills" class="mt-16">
-    <h2 class="text-2xl font-bold text-text mb-6">mes compétences : </h2>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm text-text">
-      <div>
-        <h3 class="font-semibold text-text mb-2">Languages</h3>
-        <ul>
-          <li>- JavaScript</li>
-          <li>- Python</li>
-          <li>- PHP</li>
-          <li>- HTML/CSS</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold text-text mb-2">Databases</h3>
-        <ul>
-          <li>- MySQL</li>
-          <li>- SQLite</li>
-          <li>- PostgreSQL</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold text-text mb-2">Tools</h3>
-        <ul>
-          <li>- VSCode</li>
-          <li>- Git/GitHub</li>
-          <li>- Figma</li>
-          <li>- Linux (Ubuntu)</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold text-text mb-2">Other</h3>
-        <ul>
-          <li>- REST APIs</li>
-          <li>- SEO & Accessibility</li>
-          <li>- TailwindCSS</li>
-          <li>- Twig</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold text-text mb-2">Frameworks</h3>
-        <ul>
-          <li>- React</li>
-          <li>- Symfony</li>
-          <li>- Node.js</li>
-          <li>- Express.js</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+{% import 'components/macro/_light.html.twig' as macros %}
+
+<section class="relative w-full h-[50vh]">
+
+  {# LIGHT EFFECTS #}
+  {{ macros.light('light small top-left') }}
+  {{ macros.light('light medium bottom-right') }}
+
+  {{ macros.light_oval_purple('light large center') }}
+
+  {{ macros.light_purple('light medium top-right') }}
+  {{ macros.light_purple('light small bottom-left') }}
+
+  {{ macros.light_hexagone('light hexagon-1') }}
+  {{ macros.light_hexagone('light hexagon-2') }}
+
+</section>
