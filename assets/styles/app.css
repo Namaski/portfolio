@@ -65,19 +65,19 @@
 
   
 .light {
-  @apply absolute transform -translate-x-1/2 -translate-y-1/2;
+  @apply absolute transform -translate-x-1/2 -translate-y-1/2 -z-10;
 }
 
 .light.small {
-  @apply w-[10%];
+  @apply w-[20%];
 }
 
 .light.medium {
-  @apply w-[15%];
+  @apply w-[30%];
 }
 
 .light.large {
-  @apply w-[25%];
+  @apply w-[60%];
 }
 
 .light.top-left {
@@ -108,19 +108,5 @@
   @apply bottom-[20%] right-[25%] w-[15%];
 }
 
-
-@media (max-width: 768px) {
-  .light.small {
-    @apply w-[15%];
-  }
-
-  .light.medium {
-    @apply w-[20%];
-  }
-
-  .light.large {
-    @apply w-[30%];
-  }
-}
 
 }
