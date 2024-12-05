@@ -63,50 +63,126 @@
     @apply bg-[rgba(224,170,255,0.5)];
   }
 
+  .light {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(
+      circle,
+      rgba(224, 170, 255, 0.3) 0%,
+      rgba(224, 170, 255, 0.05) 80%
+    );
+    filter: blur(32px);
+  }
   
-.light {
-  @apply absolute transform -translate-x-1/2 -translate-y-1/2 -z-10;
-}
-
-.light.small {
-  @apply w-[20%];
-}
-
-.light.medium {
-  @apply w-[30%];
-}
-
-.light.large {
-  @apply w-[60%];
-}
-
-.light.top-left {
-  @apply top-[10%] left-[10%];
-}
-
-.light.bottom-right {
-  @apply bottom-[10%] right-[10%];
-}
-
-.light.center {
-  @apply top-1/2 left-1/2;
-}
-
-.light.top-right {
-  @apply top-[5%] right-[5%];
-}
-
-.light.bottom-left {
-  @apply bottom-[5%] left-[5%];
-}
-
-.light.hexagon-1 {
-  @apply top-[30%] left-[20%] w-[12%];
-}
-
-.light.hexagon-2 {
-  @apply bottom-[20%] right-[25%] w-[15%];
-}
-
+  .light.small {
+    width: 30%;
+    max-width: 150px;
+    aspect-ratio: 1 / 1;
+  }
+  
+  .light.big {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 4 / 3;
+  }
+  
+  .light.white {
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0.05) 80%
+    );
+  }
+  
+  .hexagone-light{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    max-width: 250px;
+  }
+  
+  h3{
+    color: white;
+    font-size: 2em;
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 1.2em;
+  }
+  
+  
+  
+  /* SKILLS SECTION */
+  
+  .skills-container {
+    position: relative;
+   
+    width: 300px; 
+    height: 300px; 
+    margin: 2em auto 0 auto;
+  }
+  
+  
+  .hexagon {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  
+  .hexagon:hover {
+    transform: scale(1.1); 
+  }
+  
+  
+  .hex-top-left {
+    top: 0;
+    left: 0;
+    transform: translate(-30%, -20%);
+  }
+  
+  .hex-top-right {
+    top: 0;
+    right: 0;
+    transform: translate(30%, -20%);
+  }
+  
+  .hex-bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: translate(-30%, 20%);
+  }
+  
+  .hex-bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: translate(30%, 20%);
+  }
+  
+  
+  .skill-title {
+    position: absolute;
+    font-size: 14px;
+    color: #a0a0a0;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  
+  .skill-title.top {
+    bottom: 120%; 
+    text-align: center;
+  }
+  
+  .skill-title.bottom {
+    top: 120%; 
+    text-align: center;
+  }
+  
+  
+  
+  
 
 }

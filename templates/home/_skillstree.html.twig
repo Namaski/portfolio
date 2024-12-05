@@ -1,17 +1,61 @@
 {% import 'components/macro/_light.html.twig' as macros %}
 
-<section class="relative w-full h-[50vh]">
+{% block javascripts %}
+  <script defer src="{{asset('./js/script.js')}}"></script>
+{% endblock javascripts %}
+
+<section class="relative w-full h-[70vh] overflow-x-hidden">
 
   {# LIGHT EFFECTS #}
-  {{ macros.light('light small top-left') }}
-  {{ macros.light('light small bottom-right') }}
+  <div class="light small" style="top: 12%; left: 25%;"></div>
+  <div class="light small white" style="top: 24%; left: 15%;"></div>
+  <div class="light small white" style="top: 75%; left: 12%;"></div>
+  <div class="light small white" style="top: 24%; left: 85%;"></div>
+  <div class="light big red" style="top: 50%; left: 50%;"></div>
 
-  {{ macros.light_oval_purple('light large center') }}
+  <div class="hexagone-light" style="top: 65%;
+left: 20%;">
+      <embed src="{{asset('./img/svg/hexagone-light.svg')}}" type="image/svg+xml" />
+  </div>
+  <div class="hexagone-light" style="top: 35%;
+left: 75%;">
+      <embed src="{{asset('./img/svg/hexagone-light.svg')}}" type="image/svg+xml" />
+  </div>
 
-  {{ macros.light_purple('light small top-right') }}
-  {{ macros.light_purple('light small bottom-left') }}
+  <h3>COMPETENCES</h3>
 
-  {{ macros.light_hexagone('light small hexagon-1') }}
-  {{ macros.light_hexagone('light large hexagon-2') }}
+        <div class="skills-container">
+
+            <div class="hexagon hex-top-left">
+                <div id="svg-container-1">
+                </div>
+                <p class="skill-title">Frontend</p>
+
+            </div>
+
+            <div class="hexagon hex-top-right">
+                <div id="svg-container-2">
+                </div>
+                <p class="skill-title">Backend</p>
+
+            </div>
+
+            <div class="hexagon hex-bottom-left">
+                <div id="svg-container-3"> 
+                </div>
+                <p class="skill-title">Logiciels</p>
+
+            </div>
+
+            <div class="hexagon hex-bottom-right">
+                <div id="svg-container-4">
+                </div>
+                <p class="skill-title">Base de Données</p>
+
+            </div>
+
+            
+
+        </div>
 
 </section>
